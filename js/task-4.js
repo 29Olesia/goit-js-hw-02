@@ -1,46 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  function getShippingCost(country) {
-      let price;
-      let message;
-    
-      switch (country) {
-          case "China":
-              price = 100;
-              message = `Shipping to ${country} will cost ${price} credits`;
-              break;
-          case "Chile":
-              price = 250;
-              message = `Shipping to ${country} will cost ${price} credits`;
-              break;
-          case "Australia":
-              price = 170;
-              message = `Shipping to ${country} will cost ${price} credits`;
-              break;
-          case "Jamaica":
-              price = 120;
-              message = `Shipping to ${country} will cost ${price} credits`;
-              break;
-          default:
-              message = "Sorry, there is no delivery to your country";
-      }
-    
-      return message;
-  }
+function getShippingCost(country) {
+     let price;
+     let message;
 
-  const task4Results = document.getElementById('task-4-results');
+     switch (country) {
+       case "China":
+         price = 100;
+         message = `Shipping to ${country} will cost ${price} credits`;
+         break;
+       case "Chile":
+         price = 250;
+         message = `Shipping to ${country} will cost ${price} credits`;
+         break;
+       case "Australia":
+         price = 170;
+         message = `Shipping to ${country} will cost ${price} credits`;
+         break;
+       case "Jamaica":
+         price = 120;
+         message = `Shipping to ${country} will cost ${price} credits`;
+         break;
+       default:
+         message = "Sorry, there is no delivery to your country";
+     }
 
-  const messages = [
-      getShippingCost("Australia"),
-      getShippingCost("Germany"),
-      getShippingCost("China"),
-      getShippingCost("Chile"),
-      getShippingCost("Jamaica"),
-      getShippingCost("Sweden")
-  ];
+     return message;
+   }
 
-  messages.forEach(message => {
-      const p = document.createElement('p');
-      p.textContent = message;
-      task4Results.appendChild(p);
-  });
-});
+   console.log(getShippingCost("Australia")); 
+   console.log(getShippingCost("Germany")); 
+   console.log(getShippingCost("China")); 
+   console.log(getShippingCost("Chile")); 
+   console.log(getShippingCost("Jamaica")); 
+   console.log(getShippingCost("Sweden")); 
